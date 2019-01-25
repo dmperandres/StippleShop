@@ -44,6 +44,10 @@ void _image_IO::read_image(string Name,cv::Mat &Image_in)
     exit(-1);
   }
 
+  if (Image_in.channels()==4){
+     cv::cvtColor(Image_in,Image_in,CV_BGRA2BGR);
+  }
+
   if (Image_in.depth()!=CV_8U){
     cout << "Error in the depth of the image" << endl;
     exit(-1);
