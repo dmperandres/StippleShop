@@ -4,7 +4,7 @@
 This repository contains the source code for the StippleShop program that we developed as part of our publication:
 
 Domingo Martín, Germán Arroyo, Alejandro Rodríguez and Tobias Isenberg. A survey of digital stippling. Computer & Graphics 67: 24-44, 2017.
-DOI: [10.1016/j.cag.2017.05.001](https://doi.org/10.1016/j.cag.2017.05.001)
+DOI: [10.1016/j.cag.2017.05.001](https://doi.org/10.1016/j.cag.2017.05.001). An open access paper version is [available on HAL](https://hal.inria.fr/hal-01528484).
 
 ## Bibtex
 ```
