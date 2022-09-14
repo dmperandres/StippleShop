@@ -49,7 +49,7 @@ In addition, in both cases the project requires:
 * anything else?
 
 ## Preparation/configuration
-To prepare for compilation, edit the [```stippleshop.pro```](src/stippleshop.pro) project file. At the top, if you do not want to compile under Linux, you need to switch the compilation to Windows (uncomment ```DEFINES = WINDOWS``` and comment out ``DEFINES += LINUX```). You also need to adjust the ```INCLUDEPATH``` paths to your respective library versions of OpenCV and GLEW (at the bottom of the file).
+To prepare for compilation, edit the [```stippleshop.pro```](src/stippleshop.pro) project file. At the top, if you do not want to compile under Linux, you need to switch the compilation to Windows (uncomment ```DEFINES = WINDOWS``` and comment out ```DEFINES += LINUX```). You also need to adjust the ```INCLUDEPATH``` paths to your respective library versions of OpenCV and GLEW (at the bottom of the file).
 
 In the [```stippleshop.pro```](src/stippleshop.pro) project file you can also adjust the filters to be included. If those filters not included in this repository (see above) should be included, download them from the mentioned URL and enable the corresponding lines in the [```stippleshop.pro```](src/stippleshop.pro) project file.
 
