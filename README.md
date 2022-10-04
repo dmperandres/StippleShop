@@ -61,7 +61,7 @@ To prepare for compilation, edit the [```stippleshop.pro```](src/stippleshop.pro
 
 ## Compilation Windows
 
-We need detailed steps here.
+*We need detailed steps here.*
 
 ## Example tutorial to create a simple stippled vector image
 1. Run the compiled binary
