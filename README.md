@@ -44,7 +44,9 @@ This project compiles under Linux and Windows. In both cases the project require
 
 ### Installation of the requirements under Linux
 
-
+* First, install the GPU drivers for your respective graphics card. For example for an nVidia card under Ubuntu, [something that needs to be done].
+* Install the compilation environment: ```sudo apt-get install build-essential```
+* 
 
 ### Installation of the requirements under Windows
 
