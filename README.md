@@ -44,20 +44,20 @@ This project compiles under Linux and Windows. In both cases the project require
 
 ### Installation of the requirements under Linux
 
-* First, install the GPU drivers for your respective graphics card. For example for an nVidia card under Ubuntu, [something that needs to be done].
+* First, install the GPU drivers for your respective graphics card. For example for an nVidia card under Ubuntu, *[something that needs to be done]*.
 * Install the compilation environment: ```sudo apt-get install build-essential```
-* 
+* *more*
 
 ### Installation of the requirements under Windows
 
-
+*to be added later*
 
 ## Preparation/configuration
 To prepare for compilation, edit the [```stippleshop.pro```](src/stippleshop.pro) project file. At the top, if you do not want to compile under Linux, you need to switch the compilation to Windows (uncomment ```DEFINES = WINDOWS``` and comment out ```DEFINES += LINUX```). You also need to adjust the ```INCLUDEPATH``` paths to your respective library versions of OpenCV and GLEW (at the bottom of the file). In the [```stippleshop.pro```](src/stippleshop.pro) project file you can also adjust the filters to be included.
 
 ## Compilation Linux
 
-We need detailed steps here.
+*We need detailed steps here.*
 
 ## Compilation Windows
 
@@ -65,7 +65,7 @@ We need detailed steps here.
 
 ## Example tutorial to create a simple stippled vector image
 1. Run the compiled binary
-2. more steps
-3. more steps
+2. *more steps*
+3. *more steps*
 
 For further documentation on other use and the different functionality see the detailed description in the [```StippleShop_manual.pdf```](doc/StippleShop_manual.pdf) manual.
