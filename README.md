@@ -35,23 +35,23 @@ Please note the software is provided "as is".  Use it at your own risk, although
 [GNU General Public License v3](https://www.gnu.org/licenses/gpl-3.0.en.html)
 (see [license.txt](license.txt)).
 
-## Additional filter plugins
-Some additional code parts for specific filters have unclear or incompatible licenses and are thus not included here. They can be obtained from (http://calipso.ugr.es/dmartin/Research/Software).
-
 ## Requirements
-This project compiles under Linux and Windows. For Linux it requires the modules ```module1```, ```module2```, and ```module3```. To install those use your system's default installation mechanism. For Windows, ```software1```, ```software2```, and ```software3``` need to be installed.
+This project compiles under Linux and Windows. In both cases the project requires these additional components:
+* ```Qt SDK``` (libs + QtCreator), checked with version 5.15.2: https://www.qt.io/
+* ```OpenCV```, checked with version 4.6: https://opencv.org/
+* ```GLEW```, checked with version 2.1: https://glew.sourceforge.net/
+* ```OpenGL```, checked with version 4.6): https://www.opengl.org/
 
-In addition, in both cases the project requires:
-* ```Qt IDE``` version ?: (add.link.com)
-* ```QtCreator``` version ?: (add.link.com)
-* ```OpenCV``` version ?: (add.link.com)
-* ```GLEW``` version ?: (add.link.com)
-* anything else?
+### Installation of the requirements under Linux
+
+
+
+### Installation of the requirements under Windows
+
+
 
 ## Preparation/configuration
-To prepare for compilation, edit the [```stippleshop.pro```](src/stippleshop.pro) project file. At the top, if you do not want to compile under Linux, you need to switch the compilation to Windows (uncomment ```DEFINES = WINDOWS``` and comment out ```DEFINES += LINUX```). You also need to adjust the ```INCLUDEPATH``` paths to your respective library versions of OpenCV and GLEW (at the bottom of the file).
-
-In the [```stippleshop.pro```](src/stippleshop.pro) project file you can also adjust the filters to be included. If those filters not included in this repository (see above) should be included, download them from the mentioned URL and enable the corresponding lines in the [```stippleshop.pro```](src/stippleshop.pro) project file.
+To prepare for compilation, edit the [```stippleshop.pro```](src/stippleshop.pro) project file. At the top, if you do not want to compile under Linux, you need to switch the compilation to Windows (uncomment ```DEFINES = WINDOWS``` and comment out ```DEFINES += LINUX```). You also need to adjust the ```INCLUDEPATH``` paths to your respective library versions of OpenCV and GLEW (at the bottom of the file). In the [```stippleshop.pro```](src/stippleshop.pro) project file you can also adjust the filters to be included.
 
 ## Compilation Linux
 
