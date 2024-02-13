@@ -39,11 +39,10 @@ Please note the software is provided "as is".  Use it at your own risk, although
 
 ## Requirements
 This project compiles under Linux and Windows. In both cases the project requires these additional components:
-* ```Qt SDK``` (libraries + QtCreator + MingGW compiler), checked with version 5.15.2: https://www.qt.io/
+* ```Qt SDK``` (libraries + QtCreator + MingGW compiler), checked with version 6.2.4: https://www.qt.io/
 * ```OpenCV```, checked with version 4.9: https://opencv.org/
 * ```CMake```, checked with version 3.27.9: https://cmake.org/
 * ```GLEW```, checked with version 2.1: https://glew.sourceforge.net/
-* ```OpenGL```, checked with version 4.6): https://www.opengl.org/
 
 ### Installation of the compilation requirements under Windows (tested under Windows 10)
 
