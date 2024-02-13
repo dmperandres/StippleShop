@@ -25,8 +25,10 @@ DOI: [10.1016/j.cag.2017.05.001](https://doi.org/10.1016/j.cag.2017.05.001). An 
 }
 ```
 
-## Project website
+## Project website and pre-compiled binaries
 https://tobias.isenberg.cc/VideosAndDemos/Martin2017SDS
+
+This website also provides pre-compiled binary releases for both Windows and Linux.
 
 ## Note
 Please note the software is provided "as is".  Use it at your own risk, although data loss is unlikely. Do take the standard precautions like saving your work in other programs.
