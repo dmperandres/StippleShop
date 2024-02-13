@@ -75,6 +75,7 @@ This project compiles under Linux and Windows. In both cases the project require
   * click the "Browse Source..." button and select the "sources" folder of OpenCV, by default this should be ```C:\Users\[your windows user]\Downloads\opencv\sources```
   * click the "Browse Build..." button and select the "mybuild" folder you previously created for OpenCV, by default this should be ```C:\Users\[your windows user]\Downloads\opencv\mybuild```
   * click the "Configure" button and select "MingGW Makefiles" from the drop-down list, then click the "Finish" button
+* _not complete yet, will be finalized later_
 
 ### Installation of the requirements under Linux (tested under Kubuntu 22.04.3 and Linux Mint 21.3)
 
@@ -102,11 +103,13 @@ This project compiles under Linux and Windows. In both cases the project require
 * now we get and and compile GLEW
   * change back to the code directory: `cd ~/code`
   * download the sources: `wget https://sourceforge.net/projects/glew/files/glew/2.1.0/glew-2.1.0.zip/download -O glew.zip`
-  * unzip the downloaded archive: `glew.zip`
+  * unzip the downloaded archive: `unzip glew.zip`
+  * rename the generated archive to avoid errors with the installation later: `mv glew-2.1.0 glew-2.1`
+  * create a folder for the resulting installation: `mkdir glew-2.1.0`
   * if you follow this process on a real machine then the needed OpenGL drivers and development files for X11 should be installed already; nothing do to at this point
   * if, in contrast, you follow this process in a virtual machine then we have to install the needed OpenGL drivers and development files for X11 (using free drivers)
     * run `sudo apt install freeglut3-dev libx11-dev`
-  * change to the GLEW sources folder: `cd glew-2.1.0`
+  * change to the GLEW sources folder: `cd glew-2.1`
   * edit the Makefile to specify Makefile a local installation instead of a global one: `nano Makefile`, look for `GLEW_DEST`, change `/usr` to `/home/user/code/glew-2.1.0`, save the file with Ctrl-O, and then exit nano with Ctrl-X
   * compile GLEW: `make`
   * install GLEW: `make install`
@@ -114,9 +117,19 @@ This project compiles under Linux and Windows. In both cases the project require
   * open a browser and go to `https://www.qt.io/download-open-source?hsLang=en`
   * scroll down to find the "Download the Qt Online Installer" button and click it
   * select Linux and click on the "Qt Online Insaller for Linux (64-bit)" button to download the install script
-  * open the folder where you saved the downloaded script and double-click it to start it
-  * 
-
+  * change to folder where you saved the downloaded script, make the script executable, and run it; e.g., `cd ~/Downloads ; chmod 755 qt-unified-linux-x64-4.6.1-online.run ; ./qt-unified-linux-x64-4.6.1-online.run`
+  * this opens a dialog to configure the Qt installation
+  * you need a Qt account to proceed on the first screen, so either use your existing account or generate a new account; then "Next >"
+  * agree to the license on the next screen, either enter a company name or check the box that states that you are an individual, then "Next >"
+  * simply "Next >" on the Welcome dialog
+  * make a decision on the Contribution to Qt Development dialog, then "Next >"
+  * in the Installation folder dialog, specify the target directory; e.g., `/home/user/code/Qt`
+  * also leave the "Custom installation" box checked, then click "Next >"
+  * in the Components tree, unselect "Qt Design Studio > Qt Design Studio X.Y.Z" and select "Qt > Qt 6.2.4"
+  * add any additional components you may want, but leave the rest of the pre-selections as they are, then click "Next >"
+  * in the License Agreement dialog, check the box that you agree to the license conditions, then click "Next >"
+  * click "Next >" to start the installation of Qt and CMake
+* _not complete yet, is currently in the process of being compiled_
 
 ## Preparation/configuration
 To prepare for compilation, edit the [```stippleshop.pro```](src/stippleshop.pro) project file.
