@@ -147,8 +147,10 @@ This project compiles under Linux and Windows. In both cases the project require
   * at the bottom of the file, adjust the ```INCLUDEPATH``` paths to your respective library versions of OpenCV and GLEW:
 ```
 INCLUDEPATH += /home/user/code/opencv-4.9.0/include
-INCLUDEPATH += /home/user/code/opencv-4.9.0/opencv4
-INCLUDEPATH += /home/user/code/glew-2.1.0/include
+INCLUDEPATH += /home/user/code/opencv-4.9.0/include/opencv4
+INCLUDEPATH += /home/user/code/opencv-4.9.0/include/opencv4/opencv2
+INCLUDEPATH += /home/user/code/glew-2.1.0/inctest
+lude
 INCLUDEPATH += $$PWD/shaders
 INCLUDEPATH += $${FILE_IO_PATH}
 INCLUDEPATH += $${COMMON_CLASSES_PATH}
