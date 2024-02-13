@@ -113,8 +113,8 @@ This project compiles under Linux and Windows. In both cases the project require
   * edit the Makefile to specify Makefile a local installation instead of a global one: `nano Makefile`, look for `GLEW_DEST`, change `/usr` to `/home/user/code/glew-2.1.0`, save the file with Ctrl-O, and then exit nano with Ctrl-X
   * compile GLEW: `make`
   * install GLEW: `make install`
-* now we get and compile Qt
-  * open a browser and go to `https://www.qt.io/download-open-source?hsLang=en`
+* now we get Qt
+  * open a browser and go to [`https://www.qt.io/download-open-source?hsLang=en`](https://www.qt.io/download-open-source?hsLang=en)
   * scroll down to find the "Download the Qt Online Installer" button and click it
   * select Linux and click on the "Qt Online Insaller for Linux (64-bit)" button to download the install script
   * change to folder where you saved the downloaded script, make the script executable, and run it; e.g., `cd ~/Downloads ; chmod 755 qt-unified-linux-x64-4.6.1-online.run ; ./qt-unified-linux-x64-4.6.1-online.run`
@@ -128,20 +128,41 @@ This project compiles under Linux and Windows. In both cases the project require
   * in the Components tree, unselect "Qt Design Studio > Qt Design Studio X.Y.Z" and select "Qt > Qt 6.2.4"
   * add any additional components you may want, but leave the rest of the pre-selections as they are, then click "Next >"
   * in the License Agreement dialog, check the box that you agree to the license conditions, then click "Next >"
-  * click "Next >" to start the installation of Qt and CMake
-* _not complete yet, is currently in the process of being compiled_
-
-## Preparation/configuration
-To prepare for compilation, edit the [```stippleshop.pro```](src/stippleshop.pro) project file.
-* At the top, switch the compilation to Windows (uncomment ```DEFINES = WINDOWS``` and comment out ```DEFINES += LINUX```; for compiling under Linux you can leave it as is).
-* You also need to adjust the ```INCLUDEPATH``` paths to your respective library versions of OpenCV and GLEW (at the bottom of the file).
-* In the [```stippleshop.pro```](src/stippleshop.pro) project file you can also adjust the filters to be included. By default, however, you can leave these settings as they are.
+  * click "Next >" to start the installation of Qt (if you do not have enough disk space then "Next >" is greyed out)
 
 ## Compilation Windows
 
-[//]: # (## Compilation Linux)
+* get the StippleShop sources, either through git (`cd ~/code ; git clone https://github.com/dmperandres/StippleShop.git`) or by downloading a zip archive from [`https://github.com/dmperandres/StippleShop/archive/refs/heads/master.zip`](https://github.com/dmperandres/StippleShop/archive/refs/heads/master.zip) and then extracting the archive
+* in the main directory of the StippleShop code (`cd ~/code/StippleShop/src` or similar), edit the [```stippleshop.pro```](src/stippleshop.pro) project file; e.g., `nano stippleshop.pro`
+  * at the top, switch the compilation to Windows (uncomment ```DEFINES = WINDOWS``` and comment out ```DEFINES += LINUX```; for compiling under Linux you can leave it as is)
+  * you also need to adjust the ```INCLUDEPATH``` paths to your respective library versions of OpenCV and GLEW (at the bottom of the file).
+  * in the [```stippleshop.pro```](src/stippleshop.pro) project file you can also adjust the filters to be included. By default, however, you can leave these settings as they are.
+* _not complete yet, will be finalized later_
 
-[//]: # (*We need detailed steps here.*)
+## Compilation Linux
+
+* get the StippleShop sources: `cd ~/code ; git clone https://github.com/dmperandres/StippleShop.git`
+* change to the main directory of the StippleShop code: `cd ~/code/StippleShop/src`
+* edit the [```stippleshop.pro```](src/stippleshop.pro) project file; e.g., `nano stippleshop.pro`
+  * at the bottom of the file, adjust the ```INCLUDEPATH``` paths to your respective library versions of OpenCV and GLEW:
+```
+INCLUDEPATH += /home/user/code/opencv-4.9.0/include
+INCLUDEPATH += /home/user/code/opencv-4.9.0/opencv4
+INCLUDEPATH += /home/user/code/glew-2.1.0/include
+INCLUDEPATH += $$PWD/shaders
+INCLUDEPATH += $${FILE_IO_PATH}
+INCLUDEPATH += $${COMMON_CLASSES_PATH}
+
+LIBS += \
+    -L/home/user/code/glew-2.1.0/lib -lGLEW \
+    -L/home/user/code/opencv-4.9.0/lib -lopencv_core -lopencv_highgui -lopenc>
+    -L/usr/X11R6/lib64 -lGL
+}
+```
+  * in the [```stippleshop.pro```](src/stippleshop.pro) project file you can also adjust the filters to be included. By default, however, you can leave these settings as they are.
+  * once done with the edits in [```stippleshop.pro```](src/stippleshop.pro), save it and exit the editor
+* run QtCreator: `cd ~/code ; Qt/Tools/QtCreator/bin/qtcreator`
+* _not complete yet, currently in the process of being written_
 
 ## Example tutorial to create a simple stippled vector image
 1. Run the compiled binary
