@@ -38,7 +38,7 @@ Please note the software is provided "as is".  Use it at your own risk, although
 ## Requirements
 This project compiles under Linux and Windows. In both cases the project requires these additional components:
 * ```Qt SDK``` (libraries + QtCreator + MingGW compiler), checked with version 5.15.2: https://www.qt.io/
-* ```OpenCV```, checked with version 4.6: https://opencv.org/
+* ```OpenCV```, checked with version 4.9: https://opencv.org/
 * ```CMake```, checked with version 3.27.9: https://cmake.org/
 * ```GLEW```, checked with version 2.1: https://glew.sourceforge.net/
 * ```OpenGL```, checked with version 4.6): https://www.opengl.org/
@@ -75,11 +75,47 @@ This project compiles under Linux and Windows. In both cases the project require
   * click the "Browse Build..." button and select the "mybuild" folder you previously created for OpenCV, by default this should be ```C:\Users\[your windows user]\Downloads\opencv\mybuild```
   * click the "Configure" button and select "MingGW Makefiles" from the drop-down list, then click the "Finish" button
 
-[//]: # (### Installation of the requirements under Linux)
+### Installation of the requirements under Linux (tested under Kubuntu 22.04.3 and Linux Mint 21.3)
 
-[//]: # (* First, install the GPU drivers for your respective graphics card. For example for an nVidia card under Ubuntu, *[something that needs to be done]*.)
-[//]: # (* Install the compilation environment: ```sudo apt-get install build-essential```)
-[//]: # (* *more*)
+* update your environment: `sudo apt update ; sudo apt upgrade`
+* install the compiler and other complementary tools, cmake, the cmake GUI, wget, Git: `sudo apt install build-essential cmake cmake-qt-gui wget git`
+* create a folder to place all the necessary code and libraries and change to that folder: `cd ~ ; mkdir code ; cd code`
+* now we get and compile OpenCV
+  * download the sources: `wget https://github.com/opencv/opencv/archive/4.9.0.zip`
+  * unzip the downloaded archive: `unzip 4.9.0.zip`
+  * change the name of the created folder: `mv opencv-4.9.0 opencv-4.9`
+  * create a new folder to hold the created library: `mkdir opencv-4.9.0`
+  * change to the sources directory: `cd opencv-4.9`
+  * create a new folder to hold the object code: `mkdir build`
+  * start the CMake GUI: `cmake-gui`
+  * click the "Browse Source..." button and select the "sources" folder of OpenCV, by default this should be `/home/user/code/opencv-4.9` with `user` being your Linux user name
+  * click the "Browse Build..." button and select the "build" folder you previously created for OpenCV, by default this should be `/home/user/code/opencv-4.9/build`
+  * click the "Configure" button and select "Unix Makefiles" from the drop-down list, leave "Use native compilers" selected, then click the "Finish" button
+  * this runs some processes and then shows some options; from these options select BUILD_JPEG and BUILD_PNG, in addition to the already selected ones
+  * specify where the library and complementary files will be placed for a local installation: in the field CMAKE_INSTALL_PREFIX change `/usr/local` to `/home/user/code/opencv-4.9.0`
+  * click the "Configure" button to generate the Makefiles, then close the CMake GUI window
+  * back in the command line, change to build folder: `cd build`
+  * compile OpenCV by running `make` (depending on your machine and its processors it could be done quicker with the `-j` option and specifying the number of threads to use; e.g., `make -j4`); this process may take quite a while ...
+  * finally do the local installation: `make install`
+  * this should have added the compiled OpenCV to `~/code/opencv-4.9.0`
+* now we get and and compile GLEW
+  * change back to the code directory: `cd ~/code`
+  * download the sources: `wget https://sourceforge.net/projects/glew/files/glew/2.1.0/glew-2.1.0.zip/download -O glew.zip`
+  * unzip the downloaded archive: `glew.zip`
+  * if you follow this process on a real machine then the needed OpenGL drivers and development files for X11 should be installed already; nothing do to at this point
+  * if, in contrast, you follow this process in a virtual machine then we have to install the needed OpenGL drivers and development files for X11 (using free drivers)
+    * run `sudo apt install freeglut3-dev libx11-dev`
+  * change to the GLEW sources folder: `cd glew-2.1.0`
+  * edit the Makefile to specify Makefile a local installation instead of a global one: `nano Makefile`, look for `GLEW_DEST`, change `/usr` to `/home/user/code/glew-2.1.0`, save the file with Ctrl-O, and then exit nano with Ctrl-X
+  * compile GLEW: `make`
+  * install GLEW: `make install`
+* now we get and compile Qt
+  * open a browser and go to `https://www.qt.io/download-open-source?hsLang=en`
+  * scroll down to find the "Download the Qt Online Installer" button and click it
+  * select Linux and click on the "Qt Online Insaller for Linux (64-bit)" button to download the install script
+  * open the folder where you saved the downloaded script and double-click it to start it
+  * 
+
 
 ## Preparation/configuration
 To prepare for compilation, edit the [```stippleshop.pro```](src/stippleshop.pro) project file.
@@ -88,8 +124,6 @@ To prepare for compilation, edit the [```stippleshop.pro```](src/stippleshop.pro
 * In the [```stippleshop.pro```](src/stippleshop.pro) project file you can also adjust the filters to be included. By default, however, you can leave these settings as they are.
 
 ## Compilation Windows
-
-* 
 
 [//]: # (## Compilation Linux)
 
