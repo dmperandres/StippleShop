@@ -91,7 +91,7 @@ Below we explain how these requirements are installed, both for Windows and Linu
 
 ### Installation of the requirements under Linux
 * update your environment: `sudo apt update ; sudo apt upgrade`
-* install the compiler and other complementary tools, cmake, the cmake GUI, wget, Git: `sudo apt install build-essential cmake cmake-qt-gui wget git`
+* install the compiler and other complementary tools: `sudo apt install build-essential libxcb-cursor0 cmake cmake-qt-gui wget git`
 * create a folder to place all the necessary code and libraries and change to that folder: `cd ~ ; mkdir code ; cd code`
 * now we get and compile [OpenCV](https://opencv.org/)
   * download the sources: `wget https://github.com/opencv/opencv/archive/4.9.0.zip`
@@ -106,7 +106,7 @@ Below we explain how these requirements are installed, both for Windows and Linu
   * click the "Configure" button and select "Unix Makefiles" from the drop-down list, leave "Use native compilers" selected, then click the "Finish" button
   * this runs some processes and then shows some options; from these options select BUILD_JPEG and BUILD_PNG, in addition to the already selected ones
   * specify where the library and complementary files will be placed for a local installation: in the field CMAKE_INSTALL_PREFIX change `/usr/local` to `/home/user/code/opencv-4.9.0`
-  * click the "Configure" button to generate the Makefiles, then close the CMake GUI window
+  * click the "Generate" button to generate the Makefiles, then close the CMake GUI window
   * back in the command line, change to build folder: `cd build`
   * compile OpenCV by running `make` (depending on your machine and its processors it could be done quicker with the `-j` option and specifying the number of threads to use; e.g., `make -j4`); this process may take quite a while ...
   * finally do the local installation: `make install`
@@ -136,7 +136,10 @@ Below we explain how these requirements are installed, both for Windows and Linu
   * make a decision on the Contribution to Qt Development dialog, then "Next >"
   * in the Installation folder dialog, specify the target directory; e.g., `/home/user/code/Qt`
   * also leave the "Custom installation" box checked, then click "Next >"
-  * in the Components tree, unselect "Qt Design Studio > Qt Design Studio X.Y.Z" and select "Qt > Qt 6.2.4"; in addition, on the right side unselect "Preview"
+  * in the Components tree, unselect "Qt Design Studio > Qt Design Studio X.Y.Z" and select "Qt > Qt 6.2.4"; in addition
+  * if there are space issues, you can also unselect items that you do not need:
+    * under the "Qt > Qt 6.2.4" subtree, you can de-select everything except "Desktop gcc 64-bit" and "Qt 5 Compatibility Module"
+    * on the right side unselect "Preview"
   * add any additional components you may want, but leave the rest of the pre-selections as they are, then click "Next >"
   * in the License Agreement dialog, check the box that you agree to the license conditions, then click "Next >"
   * click "Next >" to start the installation of Qt (if you do not have enough disk space then "Next >" is greyed out)
@@ -163,6 +166,11 @@ Below we explain how these requirements are installed, both for Windows and Linu
   * in the [```stippleshop.pro```](src/stippleshop.pro) project file you can also adjust the filters to be included. By default, however, you can leave these settings as they are.
   * once done with the edits in [```stippleshop.pro```](src/stippleshop.pro), save it and exit the editor
 * run QtCreator: `cd ~/code ; Qt/Tools/QtCreator/bin/qtcreator`
+* open StippleShop project via "File > Open file or project..." and find the [```stippleshop.pro```](src/stippleshop.pro) in the folder ```~/code/StippleShop/scr```
+* click on the "Configure project" button
+* click on the "stipplesop [master]" project object in the list on the left, then in the vertical toolbar further to the left click on "Projects" (the one with wrench icon), and in the dialog that opens up unselect "Shadow build"
+* if you want you can also edit/further adjust the [```stippleshop.pro```](src/stippleshop.pro) project file here, by clicking on the "Edit" icon on the vertical toolbar on the very left (the one with the document icon), then unfolding the tree under the "stipplesop [master]" project object, and double-clicking the [```stippleshop.pro```](src/stippleshop.pro) project file; make sure to save the project file done (Ctrl-S or File > Save stippleshop.pro)
+* initiate the build via Ctrl-B or Build > Build Project "stippleshop"
 * _not complete yet, currently in the process of being written_
 
 ## Example tutorial to create a simple stippled vector image
