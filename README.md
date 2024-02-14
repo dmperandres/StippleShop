@@ -45,7 +45,7 @@ This project compiles under Linux and Windows. In both cases the project require
 * ```GLEW```, checked with version 2.1: https://glew.sourceforge.net/
 Below we explain how these requirements are installed, both for Windows and Linux.
 
-## Windows (tested under Windows 10)
+## Build process for Windows (tested under Windows 10)
 
 ### Installation of the compilation requirements under Windows
 * download the binary [Qt](https://www.qt.io/) open-source online installer from https://www.qt.io/download-open-source and run it
@@ -87,7 +87,7 @@ Below we explain how these requirements are installed, both for Windows and Linu
   * in the [```stippleshop.pro```](src/stippleshop.pro) project file you can also adjust the filters to be included. By default, however, you can leave these settings as they are.
 * _not complete yet, will be finalized later_
 
-## Linux (tested w/ [Kubuntu](https://kubuntu.org/) 22.04.3 & [Linux Mint](https://linuxmint.com/) 21.3)
+## Build process for Linux (tested with [Kubuntu](https://kubuntu.org/) 22.04.3 & [Linux Mint](https://linuxmint.com/) 21.3)
 
 ### Installation of the requirements under Linux
 * update your environment: `sudo apt update ; sudo apt upgrade`
