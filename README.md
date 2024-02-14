@@ -116,7 +116,7 @@ This project compiles under Linux and Windows. In both cases the project require
 * now we get Qt
   * open a browser and go to [`https://www.qt.io/download-open-source?hsLang=en`](https://www.qt.io/download-open-source?hsLang=en)
   * scroll down to find the "Download the Qt Online Installer" button and click it
-  * select Linux and click on the "Qt Online Insaller for Linux (64-bit)" button to download the install script
+  * select Linux and click on the "Qt Online Installer for Linux (64-bit)" button to download the install script
   * change to folder where you saved the downloaded script, make the script executable, and run it; e.g., `cd ~/Downloads ; chmod 755 qt-unified-linux-x64-4.6.1-online.run ; ./qt-unified-linux-x64-4.6.1-online.run`
   * this opens a dialog to configure the Qt installation
   * you need a Qt account to proceed on the first screen, so either use your existing account or generate a new account; then "Next >"
