@@ -45,7 +45,9 @@ This project compiles under Linux and Windows. In both cases the project require
 * ```GLEW```, checked with version 2.1: https://glew.sourceforge.net/
 Below we explain how these requirements are installed, both for Windows and Linux.
 
-## Installation of the compilation requirements under Windows (tested under Windows 10)
+## Windows (tested under Windows 10)
+
+### Installation of the compilation requirements under Windows
 * download the binary [Qt](https://www.qt.io/) open-source online installer from https://www.qt.io/download-open-source and run it
   * this requires a free qt.io account
   * we recommend to install Qt to the default folder `C:\Qt`
@@ -77,7 +79,7 @@ Below we explain how these requirements are installed, both for Windows and Linu
   * click the "Configure" button and select "MingGW Makefiles" from the drop-down list, then click the "Finish" button
 * _not complete yet, will be finalized later_
 
-## StippleShop Compilation under Windows
+### StippleShop Compilation under Windows
 * get the StippleShop sources, e.g., by downloading a zip archive from [`https://github.com/dmperandres/StippleShop/archive/refs/heads/master.zip`](https://github.com/dmperandres/StippleShop/archive/refs/heads/master.zip) and then extracting the archive
 * in the main directory of the StippleShop code (`cd ~/code/StippleShop-master/src` or similar), edit the [```stippleshop.pro```](src/stippleshop.pro) project file with a text file editor ([Nodepad++](https://notepad-plus-plus.org/downloads/) or similar)
   * at the top, switch the compilation to Windows (uncomment ```DEFINES += WINDOWS``` and comment out ```DEFINES += LINUX```)
@@ -85,7 +87,9 @@ Below we explain how these requirements are installed, both for Windows and Linu
   * in the [```stippleshop.pro```](src/stippleshop.pro) project file you can also adjust the filters to be included. By default, however, you can leave these settings as they are.
 * _not complete yet, will be finalized later_
 
-## Installation of the requirements under Linux (tested w/ [Kubuntu](https://kubuntu.org/) 22.04.3 & [Linux Mint](https://linuxmint.com/) 21.3)
+## Linux (tested w/ [Kubuntu](https://kubuntu.org/) 22.04.3 & [Linux Mint](https://linuxmint.com/) 21.3)
+
+### Installation of the requirements under Linux
 * update your environment: `sudo apt update ; sudo apt upgrade`
 * install the compiler and other complementary tools, cmake, the cmake GUI, wget, Git: `sudo apt install build-essential cmake cmake-qt-gui wget git`
 * create a folder to place all the necessary code and libraries and change to that folder: `cd ~ ; mkdir code ; cd code`
@@ -137,7 +141,7 @@ Below we explain how these requirements are installed, both for Windows and Linu
   * in the License Agreement dialog, check the box that you agree to the license conditions, then click "Next >"
   * click "Next >" to start the installation of Qt (if you do not have enough disk space then "Next >" is greyed out)
 
-## StippleShop Compilation under Linux
+### StippleShop Compilation under Linux
 * get the StippleShop sources: `cd ~/code ; git clone https://github.com/dmperandres/StippleShop.git`
 * change to the main directory of the StippleShop code: `cd ~/code/StippleShop/src`
 * edit the [```stippleshop.pro```](src/stippleshop.pro) project file; e.g., `nano stippleshop.pro`
