@@ -144,7 +144,7 @@ This project compiles under Linux and Windows. In both cases the project require
 * get the StippleShop sources: `cd ~/code ; git clone https://github.com/dmperandres/StippleShop.git`
 * change to the main directory of the StippleShop code: `cd ~/code/StippleShop/src`
 * edit the [```stippleshop.pro```](src/stippleshop.pro) project file; e.g., `nano stippleshop.pro`
-  * at the bottom of the file, adjust the ```INCLUDEPATH``` paths to your respective library versions of OpenCV and GLEW:
+  * at the bottom of the file, adjust the ```INCLUDEPATH``` and ```LIBS``` paths to your respective user name and to your library versions of OpenCV and GLEW:
   ```
   INCLUDEPATH += /home/user/code/opencv-4.9.0/include/opencv4
   INCLUDEPATH += /home/user/code/opencv-4.9.0/include/opencv4/opencv2
