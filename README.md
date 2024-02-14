@@ -85,7 +85,7 @@ Below we explain how these requirements are installed, both for Windows and Linu
   * in the [```stippleshop.pro```](src/stippleshop.pro) project file you can also adjust the filters to be included. By default, however, you can leave these settings as they are.
 * _not complete yet, will be finalized later_
 
-## Installation of the requirements under Linux (tested under Kubuntu 22.04.3 and Linux Mint 21.3)
+## Installation of the requirements under Linux (tested w/ [Kubuntu](https://kubuntu.org/) 22.04.3 & [Linux Mint](https://linuxmint.com/) 21.3)
 * update your environment: `sudo apt update ; sudo apt upgrade`
 * install the compiler and other complementary tools, cmake, the cmake GUI, wget, Git: `sudo apt install build-essential cmake cmake-qt-gui wget git`
 * create a folder to place all the necessary code and libraries and change to that folder: `cd ~ ; mkdir code ; cd code`
