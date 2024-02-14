@@ -125,7 +125,7 @@ This project compiles under Linux and Windows. In both cases the project require
   * make a decision on the Contribution to Qt Development dialog, then "Next >"
   * in the Installation folder dialog, specify the target directory; e.g., `/home/user/code/Qt`
   * also leave the "Custom installation" box checked, then click "Next >"
-  * in the Components tree, unselect "Qt Design Studio > Qt Design Studio X.Y.Z" and select "Qt > Qt 6.2.4"
+  * in the Components tree, unselect "Qt Design Studio > Qt Design Studio X.Y.Z" and select "Qt > Qt 6.2.4"; in addition, on the right side unselect "Preview"
   * add any additional components you may want, but leave the rest of the pre-selections as they are, then click "Next >"
   * in the License Agreement dialog, check the box that you agree to the license conditions, then click "Next >"
   * click "Next >" to start the installation of Qt (if you do not have enough disk space then "Next >" is greyed out)
@@ -145,21 +145,20 @@ This project compiles under Linux and Windows. In both cases the project require
 * change to the main directory of the StippleShop code: `cd ~/code/StippleShop/src`
 * edit the [```stippleshop.pro```](src/stippleshop.pro) project file; e.g., `nano stippleshop.pro`
   * at the bottom of the file, adjust the ```INCLUDEPATH``` paths to your respective library versions of OpenCV and GLEW:
-```
-INCLUDEPATH += /home/user/code/opencv-4.9.0/include
-INCLUDEPATH += /home/user/code/opencv-4.9.0/include/opencv4
-INCLUDEPATH += /home/user/code/opencv-4.9.0/include/opencv4/opencv2
-INCLUDEPATH += /home/user/code/glew-2.1.0/include
-INCLUDEPATH += $$PWD/shaders
-INCLUDEPATH += $${FILE_IO_PATH}
-INCLUDEPATH += $${COMMON_CLASSES_PATH}
-
-LIBS += \
-    -L/home/user/code/glew-2.1.0/lib -lGLEW \
-    -L/home/user/code/opencv-4.9.0/lib -lopencv_core -lopencv_highgui -lopenc>
-    -L/usr/X11R6/lib64 -lGL
-}
-```
+  ```
+  INCLUDEPATH += /home/user/code/opencv-4.9.0/include/opencv4
+  INCLUDEPATH += /home/user/code/opencv-4.9.0/include/opencv4/opencv2
+  INCLUDEPATH += /home/user/code/glew-2.1.0/include
+  INCLUDEPATH += $$PWD/shaders
+  INCLUDEPATH += $${FILE_IO_PATH}
+  INCLUDEPATH += $${COMMON_CLASSES_PATH}
+  
+  LIBS += \
+      -L/home/user/code/glew-2.1.0/lib -lGLEW \
+      -L/home/user/code/opencv-4.9.0/lib -lopencv_core -lopencv_highgui -lopenc>
+      -L/usr/X11R6/lib64 -lGL
+  }
+  ```
   * in the [```stippleshop.pro```](src/stippleshop.pro) project file you can also adjust the filters to be included. By default, however, you can leave these settings as they are.
   * once done with the edits in [```stippleshop.pro```](src/stippleshop.pro), save it and exit the editor
 * run QtCreator: `cd ~/code ; Qt/Tools/QtCreator/bin/qtcreator`
