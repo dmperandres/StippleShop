@@ -166,7 +166,7 @@ Below we explain how these requirements are installed, both for Windows and Linu
   * in the [```stippleshop.pro```](src/stippleshop.pro) project file you can also adjust the filters to be included. By default, however, you can leave these settings as they are.
   * once done with the edits in [```stippleshop.pro```](src/stippleshop.pro), save it and exit the editor
 * run QtCreator: `cd ~/code ; Qt/Tools/QtCreator/bin/qtcreator`
-* open StippleShop project via "File > Open file or project..." and find the [```stippleshop.pro```](src/stippleshop.pro) in the folder ```~/code/StippleShop/scr```
+* open StippleShop project via "File > Open file or project..." and find the [```stippleshop.pro```](src/stippleshop.pro) in the folder ```~/code/StippleShop/src```
 * click on the "Configure project" button
 * click on the "stippleshop [master]" project object in the list on the left, then in the vertical toolbar further to the left click on "Projects" (the one with wrench icon), and in the dialog that opens up unselect "Shadow build"
 * if you want you can also edit/further adjust the [```stippleshop.pro```](src/stippleshop.pro) project file here, by clicking on the "Edit" icon on the vertical toolbar on the very left (the one with the document icon), then unfolding the tree under the "stippleshop [master]" project object, and double-clicking the [```stippleshop.pro```](src/stippleshop.pro) project file; make sure to save the project file done (Ctrl-S or File > Save stippleshop.pro)
