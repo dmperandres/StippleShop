@@ -1,5 +1,7 @@
 # StippleShop
 
+![StippleShop example images](thumbnail.png "StippleShop")
+
 ## General
 This repository contains the source code for the StippleShop program that we developed as part of our publication:
 
