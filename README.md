@@ -148,7 +148,7 @@ Below we explain how these requirements are installed, both for Windows and Linu
 
 ### StippleShop Compilation under Linux
 * get the StippleShop sources: `cd ~/code ; git clone https://github.com/dmperandres/StippleShop.git`
-* change to the main directory of the StippleShop code: `cd ~/code/StippleShop/src`
+* change to the main directory of the StippleShop code: `cd ~/code/StippleShop/code`
 * edit the [```stippleshop.pro```](src/stippleshop.pro) project file; e.g., `nano stippleshop.pro`
   * at the bottom of the file, adjust the ```INCLUDEPATH``` and ```LIBS``` paths to your respective user name and to your library versions of OpenCV and GLEW:
   ```
@@ -168,11 +168,11 @@ Below we explain how these requirements are installed, both for Windows and Linu
   * in the [```stippleshop.pro```](src/stippleshop.pro) project file you can also adjust the filters to be included. By default, however, you can leave these settings as they are.
   * once done with the edits in [```stippleshop.pro```](src/stippleshop.pro), save it and exit the editor
 * run QtCreator: `cd ~/code ; Qt/Tools/QtCreator/bin/qtcreator`
-* open StippleShop project via "File > Open file or project..." and find the [```stippleshop.pro```](src/stippleshop.pro) in the folder ```~/code/StippleShop/src```
-* click on the "Configure project" button
+* open StippleShop project via "File > Open file or project..." and find the [```stippleshop.pro```](src/stippleshop.pro) in the folder ```~/code/StippleShop/code```
+* click on the "Configure Project" button
 * click on the "stippleshop [master]" project object in the list on the left, then in the vertical toolbar further to the left click on "Projects" (the one with wrench icon), and in the dialog that opens up unselect "Shadow build"
 * if you want you can also edit/further adjust the [```stippleshop.pro```](src/stippleshop.pro) project file here, by clicking on the "Edit" icon on the vertical toolbar on the very left (the one with the document icon), then unfolding the tree under the "stippleshop [master]" project object, and double-clicking the [```stippleshop.pro```](src/stippleshop.pro) project file; make sure to save the project file done (Ctrl-S or File > Save stippleshop.pro)
-* initiate the build via Ctrl-B or Build > Build Project "stippleshop"
+* initiate the build via Ctrl-B or Build > Build Project "stippleshop"; this will again take a while (you can follow the process of the build by clicking the button ""4 Compile Output" at the bottom of the window); also note that there are some warnings that are generated, but these do not prevent the project from being build
 * _not complete yet, currently in the process of being written_
 
 ## Example tutorial to create a simple stippled vector image
