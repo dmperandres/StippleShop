@@ -172,7 +172,10 @@ Below we explain how these requirements are installed, both for Windows and Linu
 * click on the "Configure Project" button
 * click on the "stippleshop [master]" project object in the list on the left, then in the vertical toolbar further to the left click on "Projects" (the one with wrench icon), and in the dialog that opens up unselect "Shadow build"
 * if you want you can also edit/further adjust the [```stippleshop.pro```](src/stippleshop.pro) project file here, by clicking on the "Edit" icon on the vertical toolbar on the very left (the one with the document icon), then unfolding the tree under the "stippleshop [master]" project object, and double-clicking the [```stippleshop.pro```](src/stippleshop.pro) project file; make sure to save the project file done (Ctrl-S or File > Save stippleshop.pro)
-* initiate the build via Ctrl-B or Build > Build Project "stippleshop"; this will again take a few minutes (you can follow the process of the build by clicking the button "4 Compile Output" at the bottom of the window); also note that there are some warnings that are generated, but these do not prevent the project from being build
+* initiate the build via Ctrl-B or Build > Build Project "stippleshop"
+  * this will again take a few minutes
+  * you can follow the process of the build by clicking the button "4 Compile Output" at the bottom of the window
+  * also note that there are some warnings that are generated, but these do not prevent the project from being build
 * after the compile process completes you can close QtCreator, and the StippleShop binary can be found at `~/code/StippleShop/code/stippleshop`
 * _not complete yet, will be finalized later_
 
