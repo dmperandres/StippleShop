@@ -173,7 +173,8 @@ Below we explain how these requirements are installed, both for Windows and Linu
 * click on the "stippleshop [master]" project object in the list on the left, then in the vertical toolbar further to the left click on "Projects" (the one with wrench icon), and in the dialog that opens up unselect "Shadow build"
 * if you want you can also edit/further adjust the [```stippleshop.pro```](src/stippleshop.pro) project file here, by clicking on the "Edit" icon on the vertical toolbar on the very left (the one with the document icon), then unfolding the tree under the "stippleshop [master]" project object, and double-clicking the [```stippleshop.pro```](src/stippleshop.pro) project file; make sure to save the project file done (Ctrl-S or File > Save stippleshop.pro)
 * initiate the build via Ctrl-B or Build > Build Project "stippleshop"; this will again take a while (you can follow the process of the build by clicking the button ""4 Compile Output" at the bottom of the window); also note that there are some warnings that are generated, but these do not prevent the project from being build
-* _not complete yet, currently in the process of being written_
+* after the compile process completes you can close QtCreator, and the StippleShop binary can be found at `~/code/StippleShop/code/stippleshop`
+* need to continue
 
 ## Example tutorial to create a simple stippled vector image
 0. If you run the tool within a virtual machine such as [VirtualBox](https://www.virtualbox.org/), you may need to disable 3D accelleration (disable the option "Enable 3D Acceleration" in the [VirtualBox](https://www.virtualbox.org/) settings) for StippleShop to run smoothly.
