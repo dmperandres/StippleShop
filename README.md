@@ -179,11 +179,11 @@ Below we explain how these requirements are installed, both for Windows and Linu
 * after the compile process completes you can close QtCreator
 * the StippleShop binary can be found at `~/code/StippleShop/code/stippleshop`, yet it relies on some shared libraries; so start it reliably we create a shell script
   * `cd ~/code/StippleShop/code/ ; nano ./stippleshop.sh`
-  * add this text
+  * add this text (notice that you need to update `user` to your Linux user name)
   ```
   #!/bin/bash
-  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/tobias/code/glew-2.1.0/lib64
-  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/tobias/code/opencv-4.9.0/lib
+  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/user/code/glew-2.1.0/lib64
+  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/user/code/opencv-4.9.0/lib
   ./stippleshop
   ```
   * make the shell script executable: `chmod 755 stippleshop.sh`
