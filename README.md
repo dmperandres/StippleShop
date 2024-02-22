@@ -20,7 +20,7 @@ DOI: [10.1016/j.cag.2017.05.001](https://doi.org/10.1016/j.cag.2017.05.001). An 
   pages       = {24--44},
   doi         = {10.1016/j.cag.2017.05.001},
   doi_url     = {https://doi.org/10.1016/j.cag.2017.05.001},
-  oa_hal_url  = {https://hal.inria.fr/hal-01528484},
+  oa_hal_url  = {https://hal.science/hal-01528484},
   url         = {https://tobias.isenberg.cc/VideosAndDemos/Martin2017SDS},
   github_url  = {https://github.com/dmperandres/StippleShop},
   pdf         = {https://tobias.isenberg.cc/personal/papers/Martin_2017_SDS.pdf},
