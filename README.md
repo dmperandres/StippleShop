@@ -177,7 +177,7 @@ Below we explain how these requirements are installed, both for Windows and Linu
   * you can follow the process of the build by clicking the button "4 Compile Output" at the bottom of the window
   * also note that there are some warnings that are generated, but these do not prevent the project from being build
 * after the compile process completes you can close QtCreator
-* the StippleShop binary can be found at `~/code/StippleShop/code/stippleshop`, yet it relies on some shared libraries; so start it reliably we create a shell script
+* the StippleShop binary can be found at `~/code/StippleShop/code/stippleshop`, yet it relies on some shared libraries; so to start it reliably we create a shell script thay adds the necessary paths (which you can adjust as needed, also by permanently moving the shared libaries):
   * `cd ~/code/StippleShop/code/ ; nano ./stippleshop.sh`
   * add this text (notice that you need to update `user` to your Linux user name)
   ```
