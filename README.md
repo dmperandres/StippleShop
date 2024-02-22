@@ -176,8 +176,19 @@ Below we explain how these requirements are installed, both for Windows and Linu
   * this will again take a few minutes
   * you can follow the process of the build by clicking the button "4 Compile Output" at the bottom of the window
   * also note that there are some warnings that are generated, but these do not prevent the project from being build
-* after the compile process completes you can close QtCreator, and the StippleShop binary can be found at `~/code/StippleShop/code/stippleshop`
-* _not complete yet, will be finalized later_
+* after the compile process completes you can close QtCreator
+* the StippleShop binary can be found at `~/code/StippleShop/code/stippleshop`, yet it relies on some shared libraries; so start it reliably we create a shell script
+  * `cd ~/code/StippleShop/code/ ; nano ./stippleshop.sh`
+  * add this text
+  ```
+  #!/bin/bash
+  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/tobias/code/glew-2.1.0/lib64
+  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/tobias/code/opencv-4.9.0/lib
+  ./stippleshop
+  ```
+  * make the shell script executable: `chmod 755 stippleshop.sh`
+  * assuming that the `stippleshop.sh` and the `stippleshop` binary are and remain in the same directory, then you can run StippleShop by simply calling `~/code/StippleShop/code/stippleshop ; ./stippleshop.sh`
+* _continue below in the Example tutorial section_
 
 ## Example tutorial to create a simple stippled vector image
 0. If you run the tool within a virtual machine such as [VirtualBox](https://www.virtualbox.org/), you may need to disable 3D accelleration (disable the option "Enable 3D Acceleration" in the [VirtualBox](https://www.virtualbox.org/) settings) for StippleShop to run smoothly.
