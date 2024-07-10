@@ -42,53 +42,53 @@ Please note the software is provided "as is".  Use it at your own risk, although
 
 ## Requirements
 This project compiles under Linux and Windows. In both cases the project requires these additional components:
-* ```Qt SDK``` (libraries + QtCreator + MingGW compiler), checked with version 6.2.4: https://www.qt.io/
-* ```OpenCV```, checked with version 4.9: https://opencv.org/
-* ```CMake```, checked with version 3.27.9: https://cmake.org/
-* ```GLEW```, checked with version 2.1: https://glew.sourceforge.net/
+* `Qt SDK` (libraries + QtCreator + MingGW compiler): https://www.qt.io/
+* `OpenCV`: https://opencv.org/
+* `CMake`: https://cmake.org/
+* `GLEW`: https://glew.sourceforge.net/
 Below we explain how these requirements are installed, both for Windows and Linux.
 
-## Build process for Windows (tested under Windows 10)
+## Build process for Windows (tested under Windows 10 and 11)
 
 ### Installation of the compilation requirements under Windows
+* create a folder for the project; e.g., `C:\code`
+* download the OpenCV library for Windows compiled for MinGW from GitHub (https://github.com/huihut/OpenCV-MinGW-Build), download [the x64 variant of version 4.5.5 as a zip file](https://github.com/huihut/OpenCV-MinGW-Build/archive/refs/tags/OpenCV-4.5.5-x64.zip) to `C:\code` and extract there, which creates the `OpenCV-MinGW-Build-OpenCV-4.5.5-x64` subdirectory (which should then contain folders `etc`, `include`, `x64`, and some files)
+* download the binary 2.1.0 version of the GLEW library from https://glew.sourceforge.net/ and also save it to `C:\code` and extract there (the archive is called `glew-2.1.0-win32.zip` but also works with our 64 bit compilation), creating a subdirectory called `glew-2.1.0` (which should then contain folders `bin`, `doc`, `include`, `lib`, and a license file)
 * download the binary [Qt](https://www.qt.io/) open-source online installer from https://www.qt.io/download-open-source and run it
   * this requires a free qt.io account
   * we recommend to install Qt to the default folder `C:\Qt`
-  * in the "Select Components" dialog, under "Qt 5.15.2", leave all components unselected and only select the "MinGW 8.1.0 64-bit" option
-  * also unselect the "Preview" on the right side
-  * leave the rest of the dialogs on their defaults, and accept the license
-* check that the MinGW compiler is installed in folder `C:\Qt\tools\mingw810_64\bin`
-* set the necessary environment variables
-  * open Windows' environments evariables dialog: Settings > System > About > Advanced System Settings > Environment Variables...
-  * under system variables, add the following variables (adjust if you installed Qt to a different directory):
-    * `CMAKE_C_COMPILER`: `C:\Qt\Tools\mingw810_64\bin\x86_64-w64-mingw32-gcc.exe`
-    * `CMAKE_CXX_COMPILER`: `C:\Qt\Tools\mingw810_64\bin\x86_64-w64-mingw32-g++.exe`
-    * `CMAKE_MAKE_PROGRAM`: `C:\Qt\Tools\mingw810_64\bin\mingw32-make.exe`
-  * restart/reboot Windows to make these variables known to the system
-* download the [OpenCV](https://opencv.org/) Windows installer from https://opencv.org/releases/ (we tested it with version 4.6) and run it
-  * it is essentially a self-extracting archive, extract it to a directory of your choice (by default it is your user's `Download` folder)
-  * this process creates a `opencv` subdirectory that includes the source files of OpenCV
-  * inside this `opencv` folder create a new subdirectory called `mybyuild`, this will hold the results of the build
-* download the [CMake](https://cmake.org/) binary Windows installer (64 bit msi) from https://cmake.org/download/ (we tested with version 3.27.9) and run it
-  * [//]: # (https://github.com/Kitware/CMake/releases/tag/v3.25.0)
-  * accept the license
-  * ask the installer to add CMake to the system PATH for all users
-  * use the default target directory, and then install
-* now we compile [OpenCV](https://opencv.org/)
-  * to create the needed makefiles, run the CMake program you just installed (find it via your installed programs)
-  * click the "Enviroment..." button and verify that the `CMAKE_C_COMPILER`, `CMAKE_CXX_COMPILER`, and `CMAKE_MAKE_PROGRAM` variables are defined, then close the dialog
-  * click the "Browse Source..." button and select the "sources" folder of OpenCV, by default this should be ```C:\Users\[your windows user]\Downloads\opencv\sources```
-  * click the "Browse Build..." button and select the "mybuild" folder you previously created for OpenCV, by default this should be ```C:\Users\[your windows user]\Downloads\opencv\mybuild```
-  * click the "Configure" button and select "MingGW Makefiles" from the drop-down list, then click the "Finish" button
-* _not complete yet, will be finalized later_
+  * select the "Qt 6.7 for desktop development" option
+  * leave the rest of the dialogs on their defaults, accept the license, and install
 
 ### StippleShop Compilation under Windows
-* get the StippleShop sources, e.g., by downloading a zip archive from [`https://github.com/dmperandres/StippleShop/archive/refs/heads/master.zip`](https://github.com/dmperandres/StippleShop/archive/refs/heads/master.zip) and then extracting the archive
-* in the main directory of the StippleShop code (`cd ~/code/StippleShop-master/src` or similar), edit the [```stippleshop.pro```](src/stippleshop.pro) project file with a text file editor ([Nodepad++](https://notepad-plus-plus.org/downloads/) or similar)
+* get the StippleShop sources, e.g., by downloading a zip archive from [`https://github.com/dmperandres/StippleShop/archive/refs/heads/master.zip`](https://github.com/dmperandres/StippleShop/archive/refs/heads/master.zip) and then extracting the archive to `C:\code` (which creates a subdirectory `StippleShop-master` which, in turn, contains the directories `code` and `doc` and some files)
+* in the main directory of the StippleShop code (`C:\code\StippleShop-master\code` or similar), edit the [```stippleshop.pro```](src/stippleshop.pro) project file with a text file editor ([Nodepad++](https://notepad-plus-plus.org/downloads/) or similar)
   * at the top, switch the compilation to Windows (uncomment ```DEFINES += WINDOWS``` and comment out ```DEFINES += LINUX```)
-  * you also need to adjust the ```INCLUDEPATH``` paths to your respective library versions of OpenCV and GLEW (at the bottom of the file).
+  * you also need to adjust the ```INCLUDEPATH``` paths to your respective library versions of OpenCV and GLEW (at the bottom of the file, in the `!linux {` section)
+  * in our example these would look as follows:
+    ```
+    !linux {
+    TARGET= StippleShop
+    
+    # change X:\XXXXX by your fdirectory to OpenCV and GLEW
+    INCLUDEPATH += "C:\code\OpenCV-MinGW-Build-OpenCV-4.5.5-x64\include"
+    INCLUDEPATH += "C:\code\OpenCV-MinGW-Build-OpenCV-4.5.5-x64\include\opencv2"
+    INCLUDEPATH += "C:\code\glew-2.1.0\include"
+    
+    LIBS += -lopengl32 -L"C:\code\OpenCV-MinGW-Build-OpenCV-4.5.5-x64\x64\mingw\lib" -lopencv_core455 -lopencv_highgui455 -lopencv_imgcodecs455 -lopencv_imgproc455 -L"C:\code\glew-2.1.0\bin\Release\x64" -lglew32
+    }
+    ```
   * in the [```stippleshop.pro```](src/stippleshop.pro) project file you can also adjust the filters to be included. By default, however, you can leave these settings as they are.
+* run QtCreator
+* click "Open Project..." and load the [```stippleshop.pro```](src/stippleshop.pro) project file from `C:\code\StippleShop-master\code`
+* click on the "Configure Project" button (this may take some time)
+* initiate the build via Ctrl-B or Build > Build Project "stippleshop"
 * _not complete yet, will be finalized later_
+  * this will again take a few minutes
+  * you can follow the process of the build by clicking the button "4 Compile Output" at the bottom of the window
+  * also note that there are some warnings that are generated, but these do not prevent the project from being build
+* after the compile process completes you can close QtCreator
+* the StippleShop binary can be found at `~/code/StippleShop/code/stippleshop`
 
 ## Build process for Linux (tested with [Kubuntu](https://kubuntu.org/) 22.04.3 & [Linux Mint](https://linuxmint.com/) 21.3)
 
