@@ -1,0 +1,9 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+<qresource>
+     <file>icons/fileopen.png</file>
+     <file>icons/filesave.png</file>
+     <file>icons/exit.png</file>
+     <file>icons/filter.png</file>
+</qresource>
+</RCC>

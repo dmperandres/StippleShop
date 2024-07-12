@@ -1,0 +1,23 @@
+Synthesized from Bill Andrew's Texture
+10
+tone0_4096x4096.bmp
+tone1_synthesized_4096.bmp
+tone2_synthesized_4096.bmp
+tone3_synthesized_4096.bmp
+tone4_synthesized_4096.bmp
+tone5_synthesized_4096.png
+tone6_synthesized_4096.png
+tone7_synthesized_4096.bmp
+tone8_synthesized_4096.bmp
+tone9_4096x4096.bmp
+255
+245.191
+219.409 
+211.837 
+206.853 
+182.005 
+118.718 
+43.2056 
+8.01933 
+0
+
