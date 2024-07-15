@@ -85,12 +85,17 @@ Below we explain how these requirements are installed, both for Windows and Linu
 * click "Open Project..." and load the [```stippleshop.pro```](src/stippleshop.pro) project file from `C:\code\StippleShop-master\code`
 * click on the "Configure Project" button (this may take some time)
 * initiate the build via Ctrl-B or Build > Build Project "stippleshop"
-* _not complete yet, will be finalized later_
   * this will again take a few minutes
   * you can follow the process of the build by clicking the button "4 Compile Output" at the bottom of the window
   * also note that there are some warnings that are generated, but these do not prevent the project from being build
 * after the compile process completes you can close QtCreator
-* the StippleShop binary can be found at `~/code/StippleShop/code/stippleshop`
+* the StippleShop binary can be found at `C:\code\StippleShop-master\code\build\Desktop_Qt_6_7_2_MinGW_64_bit-Debug\debug`
+* to be able to run the execitable, you still need several DLLs; please copy them into the directory of the `StippleShop.exe` as follows:
+  * `Qt6Core.dll`, `Qt6Gui.dll`, `Qt6OpenGL.dll`, `Qt6OpenGLWidgets.dll`, `Qt6Svg.dll`, and `Qt6Widgets.dll` from `C:\Qt\Tools\QtCreator\bin`
+  * `glew32.dll` from `C:\code\glew-2.1.0\bin\Release\x64`
+  * `libgcc_s_seh-1.dll`, `libstdc++-6`, and `libwinpthread-1.dll` from `C:\Qt\Tools\mingw1120_64\bin`
+  * `libopencv_core455.dll`, `libopencv_imgcodecs455.dll`, and `libopencv_imgproc455.dll` from `C:\code\OpenCV-MinGW-Build-OpenCV-4.5.5-x64\x64\mingw\bin`
+* this is not complete yet!!!
 
 ## Build process for Linux (tested with [Kubuntu](https://kubuntu.org/) 22.04.3 & [Linux Mint](https://linuxmint.com/) 21.3)
 
