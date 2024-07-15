@@ -91,7 +91,7 @@ Below we explain how these requirements are installed, both for Windows and Linu
   * also note that there are some warnings that are generated, but these do not prevent the project from being build
 * after the compile process completes you can close QtCreator
 * the StippleShop binary can be found at `C:\code\StippleShop-master\code\build\Desktop_Qt_6_7_2_MinGW_64_bit-Debug\debug`
-* to be able to run the execitable, you still need several DLLs; please copy them into the directory of the `StippleShop.exe` as follows:
+* to be able to run `StippleShop.exe`, you still need several DLLs; please copy them into the directory of the `StippleShop.exe` as follows:
   * `Qt6Core.dll`, `Qt6Gui.dll`, `Qt6OpenGL.dll`, `Qt6OpenGLWidgets.dll`, `Qt6Svg.dll`, and `Qt6Widgets.dll` from `C:\Qt\Tools\QtCreator\bin`
   * `glew32.dll` from `C:\code\glew-2.1.0\bin\Release\x64`
   * `libgcc_s_seh-1.dll`, `libstdc++-6`, and `libwinpthread-1.dll` from `C:\Qt\Tools\mingw1120_64\bin`
