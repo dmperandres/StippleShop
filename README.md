@@ -53,6 +53,7 @@ Below we explain how these requirements are installed, both for Windows and Linu
 ## Build process for Windows (tested under Windows 10 and 11)
 
 ### Installation of the compilation requirements under Windows
+* (optional) install [7zip](https://7-zip.org/) and [Notepad++](https://notepad-plus-plus.org/)
 * create a folder for the project; e.g., `C:\code`
 * download the OpenCV library for Windows compiled for MinGW from GitHub (https://github.com/huihut/OpenCV-MinGW-Build), download [the x64 variant of version 4.5.5 as a zip file](https://github.com/huihut/OpenCV-MinGW-Build/archive/refs/tags/OpenCV-4.5.5-x64.zip) to `C:\code` and extract there, which creates the `OpenCV-MinGW-Build-OpenCV-4.5.5-x64` subdirectory (which should then contain folders `etc`, `include`, `x64`, and some files)
 * download the binary 2.1.0 version of the GLEW library from https://glew.sourceforge.net/ and also save it to `C:\code` and extract there (the archive is called `glew-2.1.0-win32.zip` but also works with our 64 bit compilation), creating a subdirectory called `glew-2.1.0` (which should then contain folders `bin`, `doc`, `include`, `lib`, and a license file)
