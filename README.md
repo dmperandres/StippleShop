@@ -91,13 +91,20 @@ Below we explain how these requirements are installed, both for Windows and Linu
   * you can follow the process of the build by clicking the button "4 Compile Output" at the bottom of the window
   * also note that there are some warnings that are generated, but these do not prevent the project from being build
 * after the compile process completes you can close QtCreator
-* the StippleShop binary can be found in the folder `C:\code\StippleShop-master\code\build\Desktop_Qt_6_7_2_MinGW_64_bit-Debug\release`
-* to be able to run `StippleShop.exe`, you still need several DLLs; please copy them into the directory of the `StippleShop.exe` as follows:
-  * `Qt6Core.dll`, `Qt6Gui.dll`, `Qt6OpenGL.dll`, `Qt6OpenGLWidgets.dll`, `Qt6Svg.dll`, and `Qt6Widgets.dll` from `C:\Qt\Tools\QtCreator\bin`
-  * `glew32.dll` from `C:\code\glew-2.1.0\bin\Release\x64`
-  * `libgcc_s_seh-1.dll`, `libstdc++-6`, and `libwinpthread-1.dll` from `C:\Qt\Tools\mingw1120_64\bin`
-  * `libopencv_core455.dll`, `libopencv_imgcodecs455.dll`, and `libopencv_imgproc455.dll` from `C:\code\OpenCV-MinGW-Build-OpenCV-4.5.5-x64\x64\mingw\bin`
-* this is not complete yet!!!
+* the StippleShop binary can be found in the folder `C:\code\StippleShop-master\code\build\Desktop_Qt_6_7_2_MinGW_64_bit-Release\release`
+* to be able to run `StippleShop.exe`, you still need several DLLs and files; please get them as follows:
+  * open a command line (click on the Windows Start button and then type `cmd` and hit enter) and then enter the following commands:
+    ```
+    cd C:\code\StippleShop-master\code\build\Desktop_Qt_6_7_2_MinGW_64_bit-Release\release
+    C:\Qt\6.7.2\mingw_64\bin\windeployqt.exe StippleShop.exe
+    ```
+    then you can close the command line
+  * manually copy `glew32.dll` from `C:\code\glew-2.1.0\bin\Release\x64` into the directory of the `StippleShop.exe`
+  * manually copy `libgcc_s_seh-1.dll`, `libstdc++-6`, and `libwinpthread-1.dll` from `C:\Qt\Tools\mingw1120_64\bin` into the directory of the `StippleShop.exe`
+  * manually copy `libopencv_core455.dll`, `libopencv_imgcodecs455.dll`, and `libopencv_imgproc455.dll` from `C:\code\OpenCV-MinGW-Build-OpenCV-4.5.5-x64\x64\mingw\bin` into the directory of the `StippleShop.exe`
+  * manually copy the `C:\code\StippleShop-master\code\dots` with all its contents into the directory of the `StippleShop.exe`
+  * manually copy the `C:\code\StippleShop-master\code\images` with all its contents into the directory of the `StippleShop.exe`
+  * this completes the process; you can now package the complete contents of the `C:\code\StippleShop-master\code\build\Desktop_Qt_6_7_2_MinGW_64_bit-Release\release` folder as the binary distribution of StippleShop
 * _continue below in the [Example tutorial section](#example-tutorial-to-create-a-simple-stippled-vector-image)_
 
 ## Build process for Linux (tested with [Kubuntu](https://kubuntu.org/) 22.04.3 & [Linux Mint](https://linuxmint.com/) 21.3)
