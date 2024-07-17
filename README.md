@@ -210,8 +210,7 @@ Below we explain how these requirements are installed, both for Windows and Linu
 
 ## Example tutorial to create a simple stippled vector image
 0. If you run the tool within a virtual machine such as [VirtualBox](https://www.virtualbox.org/), you may need to disable 3D accelleration (disable the option "Enable 3D Acceleration" in the [VirtualBox](https://www.virtualbox.org/) settings) for StippleShop to run smoothly.
-1. first let's see how the interaction works in general:\
-  <video src="doc/stippleshop_demo.mp4" width="720" height="405" controls></video>
+1. first let's see how the interaction works in general: watch [the inlcuded video demonstration](doc/stippleshop_demo.mp4)
 2. then let's recreate some part of the paper, specifically details from Figure 16; so run the compiled binary
 3. *more steps*
 
