@@ -209,9 +209,19 @@ Below we explain how these requirements are installed, both for Windows and Linu
 * _continue below in the [Example tutorial section](#example-tutorial-to-create-a-simple-stippled-vector-image)_
 
 ## Example tutorial to create a simple stippled vector image
-0. If you run the tool within a virtual machine such as [VirtualBox](https://www.virtualbox.org/), you may need to disable 3D accelleration (disable the option "Enable 3D Acceleration" in the [VirtualBox](https://www.virtualbox.org/) settings) for StippleShop to run smoothly.
+0. If you run the tool within a virtual machine such as [VirtualBox](https://www.virtualbox.org/), you may need to disable 3D accelleration (disable the option "Enable 3D Acceleration" in the [VirtualBox](https://www.virtualbox.org/) settings) for StippleShop to run smoothly (depends on your host machine).
 1. first let's see how the interaction works in general: watch [the inlcuded video demonstration](doc/stippleshop_demo.mp4)
-2. then let's recreate some part of the paper, specifically details from Figure 16; so run the compiled binary
-3. *more steps*
+2. then let's recreate some part of the paper using exactly this example, specifically details from Figure 16; so run the compiled binary (and enlarge or full-screen the window)
+3. select File > New effect; this creates two starting blocks in the workspace
+4. first drag and drop the "Halftoning > Ostromoukhov" filter from the list on the left into the workspace; this will generate the locations for the stipples
+5. then drag and drop the "Placement and Stippling > Example-Based Grayscale" filter from the list on the left into the workspace; this will generate the actual stippling
+6. connected the output of the "GRAY" starting block to the input of the newly created "HALFTONING_OST" block, and its output to the input of the "STIPPLING EBG" block
+7. click on the "Results" tab at the top-left (if the tool crashes here, then you may be in a VR with 3D rendering issues; try again outside of the VM using the compiled tool and all its needed DLLs and files)
+8. load the source image via File > Open input image and select the `images\frog_512.png` example image
+9. in the Images tab on the top-right, select the stippling channel: `halftoning_ost_0`, you should see the halftoning result
+10. select the correct channel: `stippling_ebg_1`, and yu should see the stippling result
+11. using Cntrl-mousewheel, zoom into the center region of the image, as indicated in the subfigures of Figure 16 of the paper
+12. from the tabs on the top-right, select "Filters", select the `stippling_ebg_1` filter, and change the pixel resolution to 1200ppi
+13. the resulting images resemble the ones from the figure, albeit with a different random placement of the stipple dots due to different seeding
 
 For further documentation on other use and the different functionality see the detailed description in the [```StippleShop_manual.pdf```](doc/StippleShop_manual.pdf) manual.
