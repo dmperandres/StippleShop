@@ -85,18 +85,20 @@ Below we explain how these requirements are installed, both for Windows and Linu
 * run QtCreator
 * click "Open Project..." and load the [```stippleshop.pro```](src/stippleshop.pro) project file from `C:\code\StippleShop-master\code`
 * click on the "Configure Project" button (this may take some time)
+* in the bottom-left of the interface, find the monitor icon of QtCreator, click on it, and switch to "Release"
 * initiate the build via Ctrl-B or Build > Build Project "stippleshop"
   * this will again take a few minutes
   * you can follow the process of the build by clicking the button "4 Compile Output" at the bottom of the window
   * also note that there are some warnings that are generated, but these do not prevent the project from being build
 * after the compile process completes you can close QtCreator
-* the StippleShop binary can be found at `C:\code\StippleShop-master\code\build\Desktop_Qt_6_7_2_MinGW_64_bit-Debug\debug`
+* the StippleShop binary can be found in the folder `C:\code\StippleShop-master\code\build\Desktop_Qt_6_7_2_MinGW_64_bit-Debug\release`
 * to be able to run `StippleShop.exe`, you still need several DLLs; please copy them into the directory of the `StippleShop.exe` as follows:
   * `Qt6Core.dll`, `Qt6Gui.dll`, `Qt6OpenGL.dll`, `Qt6OpenGLWidgets.dll`, `Qt6Svg.dll`, and `Qt6Widgets.dll` from `C:\Qt\Tools\QtCreator\bin`
   * `glew32.dll` from `C:\code\glew-2.1.0\bin\Release\x64`
   * `libgcc_s_seh-1.dll`, `libstdc++-6`, and `libwinpthread-1.dll` from `C:\Qt\Tools\mingw1120_64\bin`
   * `libopencv_core455.dll`, `libopencv_imgcodecs455.dll`, and `libopencv_imgproc455.dll` from `C:\code\OpenCV-MinGW-Build-OpenCV-4.5.5-x64\x64\mingw\bin`
 * this is not complete yet!!!
+* _continue below in the [Example tutorial section](#example-tutorial-to-create-a-simple-stippled-vector-image)_
 
 ## Build process for Linux (tested with [Kubuntu](https://kubuntu.org/) 22.04.3 & [Linux Mint](https://linuxmint.com/) 21.3)
 
@@ -197,7 +199,7 @@ Below we explain how these requirements are installed, both for Windows and Linu
   ```
   * make the shell script executable: `chmod 755 stippleshop.sh`
   * assuming that the `stippleshop.sh` and the `stippleshop` binary are and remain in the same directory, then you can run StippleShop by simply calling `~/code/StippleShop/code/stippleshop ; ./stippleshop.sh`
-* _continue below in the Example tutorial section_
+* _continue below in the [Example tutorial section](#example-tutorial-to-create-a-simple-stippled-vector-image)_
 
 ## Example tutorial to create a simple stippled vector image
 0. If you run the tool within a virtual machine such as [VirtualBox](https://www.virtualbox.org/), you may need to disable 3D accelleration (disable the option "Enable 3D Acceleration" in the [VirtualBox](https://www.virtualbox.org/) settings) for StippleShop to run smoothly.
