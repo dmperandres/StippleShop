@@ -208,7 +208,7 @@ Below we explain how these requirements are installed, both for Windows and Linu
   * assuming that the `stippleshop.sh` and the `stippleshop` binary are and remain in the same directory, then you can run StippleShop by simply calling `~/code/StippleShop/code/stippleshop ; ./stippleshop.sh`
 * _continue below in the [Example tutorial section](#example-tutorial-to-create-a-simple-stippled-vector-image)_
 
-## Example tutorial to create a simple stippled vector image
+## Example tutorial to create a simple stippled image
 0. If you run the tool within a virtual machine such as [VirtualBox](https://www.virtualbox.org/), you may need to disable 3D accelleration (disable the option "Enable 3D Acceleration" in the [VirtualBox](https://www.virtualbox.org/) settings) for StippleShop to run smoothly (depends on your host machine).
 1. first let's see how the interaction works in general: watch [the included video demonstration](doc/stippleshop_demo.mp4)
 2. then let's recreate some part of the paper using exactly this example, specifically details from Figure 16; so run the compiled binary (and enlarge or full-screen the window)
