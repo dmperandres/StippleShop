@@ -154,7 +154,7 @@ Below we explain how these requirements are installed, both for Windows and Linu
   * agree to the license on the next screen, either enter a company name or check the box that states that you are an individual, then "Next >"
   * simply "Next >" on the Welcome dialog
   * make a decision on the Contribution to Qt Development dialog, then "Next >"
-  * in the Installation folder dialog, specify the target directory; e.g., `/home/user/code/Qt`
+  * in the Installation folder dialog, specify the target directory; e.g., `/home/user/code/Qt` (change `user` to your user name)
   * also leave the "Custom installation" box checked, then click "Next >"
   * in the Components tree, unselect "Qt Design Studio > Qt Design Studio X.Y.Z" and select "Qt > Qt 6.7.2"; in addition
   * if there are space issues, you can also unselect items that you do not need:
