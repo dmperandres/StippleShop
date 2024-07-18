@@ -33,7 +33,7 @@ If you use the code in this repository we would appreciate a citation of our pap
 ## Project website and pre-compiled binaries
 https://tobias.isenberg.cc/p/Martin2017SDS
 
-This website also provides pre-compiled binary releases for both Windows and Linux.
+This website also provides pre-compiled binary releases for both Windows and Linux. For instructions on how to use the tool see the [example tutorial section](#example-tutorial-to-create-a-simple-stippled-vector-image) below.
 
 ## Note
 Please note the software is provided "as is".  Use it at your own risk, although data loss is unlikely. Do take the standard precautions like saving your work in other programs.
