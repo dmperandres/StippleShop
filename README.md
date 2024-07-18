@@ -163,6 +163,7 @@ Below we explain how these requirements are installed, both for Windows and Linu
   * add any additional components you may want, but leave the rest of the pre-selections as they are, then click "Next >"
   * in the License Agreement dialog, check the box that you agree to the license conditions, then click "Next >"
   * click "Next >" to start the installation of Qt (if you do not have enough disk space then "Next >" is greyed out)
+  * once it is done, you can close the installation dialog
 
 ### StippleShop Compilation under Linux
 * get the StippleShop sources: `cd ~/code ; git clone https://github.com/dmperandres/StippleShop.git`
