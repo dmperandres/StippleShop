@@ -33,7 +33,7 @@ If you use the code in this repository we would appreciate a citation of our pap
 ## Project website and pre-compiled binaries
 https://tobias.isenberg.cc/p/Martin2017SDS
 
-This website also provides pre-compiled binary releases for both Windows and Linux. For instructions on how to use the tool see the [example tutorial section](#example-tutorial-to-create-a-simple-stippled-vector-image) below.
+This website also provides pre-compiled binary releases for both Windows and Linux. For instructions on how to use the tool see the [example tutorial section](#example-tutorial-to-create-a-simple-stippled-image) below.
 
 ## Note
 Please note the software is provided "as is".  Use it at your own risk, although data loss is unlikely. Do take the standard precautions like saving your work in other programs.
@@ -105,7 +105,7 @@ Below we explain how these requirements are installed, both for Windows and Linu
   * manually copy the `C:\code\StippleShop-master\code\dots` with all its contents into the directory of the `StippleShop.exe`
   * manually copy the `C:\code\StippleShop-master\code\images` with all its contents into the directory of the `StippleShop.exe`
   * this completes the process; you can now package the complete contents of the `C:\code\StippleShop-master\code\build\Desktop_Qt_6_7_2_MinGW_64_bit-Release\release` folder as the binary distribution of StippleShop
-* _continue below in the [Example tutorial section](#example-tutorial-to-create-a-simple-stippled-vector-image)_
+* _continue below in the [Example tutorial section](#example-tutorial-to-create-a-simple-stippled-image)_
 
 ## Build process for Linux (tested with [Kubuntu](https://kubuntu.org/) 22.04.3 & [Linux Mint](https://linuxmint.com/) 21.3)
 
@@ -206,7 +206,7 @@ Below we explain how these requirements are installed, both for Windows and Linu
   ```
   * make the shell script executable: `chmod 755 stippleshop.sh`
   * assuming that the `stippleshop.sh` and the `stippleshop` binary are and remain in the same directory, then you can run StippleShop by simply calling `~/code/StippleShop/code/stippleshop ; ./stippleshop.sh`
-* _continue below in the [Example tutorial section](#example-tutorial-to-create-a-simple-stippled-vector-image)_
+* _continue below in the [Example tutorial section](#example-tutorial-to-create-a-simple-stippled-image)_
 
 ## Example tutorial to create a simple stippled image
 0. If you run the tool within a virtual machine such as [VirtualBox](https://www.virtualbox.org/), you may need to disable 3D accelleration (disable the option "Enable 3D Acceleration" in the [VirtualBox](https://www.virtualbox.org/) settings) for StippleShop to run smoothly (depends on your host machine).
