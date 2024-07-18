@@ -156,9 +156,9 @@ Below we explain how these requirements are installed, both for Windows and Linu
   * make a decision on the Contribution to Qt Development dialog, then "Next >"
   * in the Installation folder dialog, specify the target directory; e.g., `/home/user/code/Qt`
   * also leave the "Custom installation" box checked, then click "Next >"
-  * in the Components tree, unselect "Qt Design Studio > Qt Design Studio X.Y.Z" and select "Qt > Qt 6.2.4"; in addition
+  * in the Components tree, unselect "Qt Design Studio > Qt Design Studio X.Y.Z" and select "Qt > Qt 6.7.2"; in addition
   * if there are space issues, you can also unselect items that you do not need:
-    * under the "Qt > Qt 6.2.4" subtree, you can de-select everything except "Desktop gcc 64-bit" and "Qt 5 Compatibility Module"
+    * under the "Qt > Qt 6.7.2" subtree, you can de-select everything except "Desktop" and "Qt 5 Compatibility Module"
     * on the right side unselect "Preview"
   * add any additional components you may want, but leave the rest of the pre-selections as they are, then click "Next >"
   * in the License Agreement dialog, check the box that you agree to the license conditions, then click "Next >"
