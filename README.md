@@ -182,7 +182,6 @@ Below we explain how these requirements are installed, both for Windows and Linu
       -L/home/user/code/glew-2.1.0/lib -lGLEW \
       -L/home/user/code/opencv-4.9.0/lib -lopencv_core -lopencv_highgui -lopenc>
       -L/usr/X11R6/lib64 -lGL
-  }
   ```
   * in the [```stippleshop.pro```](src/stippleshop.pro) project file you can also adjust the filters to be included. By default, however, you can leave these settings as they are.
   * once done with the edits in [```stippleshop.pro```](src/stippleshop.pro), save it and exit the editor
