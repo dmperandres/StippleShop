@@ -222,7 +222,7 @@ Below we explain how these requirements are installed, both for Windows and Linu
 8. load the source image via File > Open input image and select the `images\frog_512.png` example image
 9. in the Images tab on the top-right, select the stippling channel: `halftoning_ost_0`, you should see the halftoning result
 10. select the correct channel: `stippling_ebg_1`, and you should see the stippling result
-11. using Ctrl-mousewheel, zoom into the center region of the image, as indicated in the subfigures of Figure 16 of the paper
+11. using Ctrl-mousewheel (Windows) or just the mousewheel (Linux), zoom into the center region of the image, as indicated in the subfigures of Figure 16 of the paper
 12. from the tabs on the top-right, select "Filters", select the `stippling_ebg_1` filter, and change the pixel resolution to 1200ppi
 13. the resulting images resemble the ones from the figure, albeit with a different random placement of the stipple dots due to different seeding
 
