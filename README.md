@@ -148,7 +148,7 @@ Below we explain how these requirements are installed, both for Windows and Linu
   * open a browser and go to [`https://www.qt.io/download-open-source?hsLang=en`](https://www.qt.io/download-open-source?hsLang=en)
   * scroll down to find the "Download the Qt Online Installer" button and click it
   * select Linux and click on the "Qt Online Installer for Linux (64-bit)" button to download the install script
-  * change to folder where you saved the downloaded script, make the script executable, and run it; e.g., `cd ~/Downloads ; chmod 755 qt-unified-linux-x64-4.6.1-online.run ; ./qt-unified-linux-x64-4.6.1-online.run`
+  * change to folder where you saved the downloaded script, make the script executable, and run it; e.g., `cd ~/Downloads ; chmod 755 qt-online-installer-linux-x64-4.8.0.run ; ./qt-online-installer-linux-x64-4.8.0.run` (you may need to adjust the name of the install script if it has changed in the meantime)
   * this opens a dialog to configure the Qt installation
   * you need a Qt account to proceed on the first screen, so either use your existing account or generate a new account; then "Next >"
   * agree to the license on the next screen, either enter a company name or check the box that states that you are an individual, then "Next >"
