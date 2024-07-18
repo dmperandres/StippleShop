@@ -137,11 +137,11 @@ Below we explain how these requirements are installed, both for Windows and Linu
   * unzip the downloaded archive: `unzip glew.zip`
   * rename the generated archive to avoid errors with the installation later: `mv glew-2.1.0 glew-2.1`
   * create a folder for the resulting installation: `mkdir glew-2.1.0`
-  * if you follow this process on a real machine then the needed OpenGL drivers and development files for X11 should be installed already; nothing do to at this point
-  * if, in contrast, you follow this process in a virtual machine then we have to install the needed OpenGL drivers and development files for X11 (using free drivers)
-    * run `sudo apt install freeglut3-dev libx11-dev`
+  * now we need to make sure that the OpenGL drivers are in place
+    * if you follow this process on a real machine then the needed OpenGL drivers and development files for X11 should be installed already; nothing do to at this point
+    * if, in contrast, you follow this process in a virtual machine then we have to install the needed OpenGL drivers and development files for X11 (using free drivers): run `sudo apt install freeglut3-dev libx11-dev`
   * change to the GLEW sources folder: `cd glew-2.1`
-  * edit the Makefile to specify Makefile a local installation instead of a global one: `nano Makefile`, look for `GLEW_DEST`, change `/usr` to `/home/user/code/glew-2.1.0`, save the file with Ctrl-O, and then exit nano with Ctrl-X
+  * edit the Makefile to specify Makefile a local installation instead of a global one: `nano Makefile`, look for `GLEW_DEST`, change `/usr` to `/home/user/code/glew-2.1.0` (adjust the `user` to your own login name), save the file with Ctrl-O, and then exit nano with Ctrl-X
   * compile GLEW: `make`
   * install GLEW: `make install`
 * now we get [Qt](https://www.qt.io/)
