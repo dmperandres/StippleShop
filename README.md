@@ -109,7 +109,12 @@ Below we explain how these requirements are installed, both for Windows and Linu
 
 ## Build process for Linux (tested with [Kubuntu](https://kubuntu.org/) 22.04.3 & [Linux Mint](https://linuxmint.com/) 21.3)
 
-### Installation of the requirements under Linux
+From the next steps, you only need to do either the simple installation of the requirements (i.e., the easy way) or the installation via local compilation (i.e., the way that provides you with more control, if desired).
+
+### Simple installation of the requirements under Linux via packages
+* will be updated
+
+### Installation of the requirements under Linux via local compilation
 * update your environment: `sudo apt update ; sudo apt upgrade`
 * install the compiler and other complementary tools: `sudo apt install build-essential libxcb-cursor0 cmake cmake-qt-gui wget git`
 * create a folder to place all the necessary code and libraries and change to that folder: `cd ~ ; mkdir code ; cd code`
