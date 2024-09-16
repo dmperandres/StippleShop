@@ -114,7 +114,7 @@ From the next steps, you only need to do **either** the [simple installation of 
 ### Simple installation of the requirements under Linux via packages (Alternative 1)
 * update your environment, install the needed requirements, and create a directory for the code:
   ```
-  sudo apt update ; sudo apt -y upgrade ; sudo apt -y install build-essential libxcb-cursor0 cmake cmake-qt-gui wget git libopencv-dev libglew-dev qtcreator qt6-base-dev qt6-qmake libqt6svg6 libqt6svg6-dev libqt6opengl6 libqt6opengl6-dev libqt6openglwidgets6 ; mkdir ~/code
+  sudo apt update ; sudo apt -y upgrade ; sudo apt -y install build-essential libxcb-cursor0 cmake cmake-qt-gui wget git libopencv-dev libglew-dev qtcreator qt6-base-dev libqt6svg6 libqt6svg6-dev libqt6opengl6 libqt6opengl6-dev libqt6openglwidgets6 ; mkdir ~/code
   ```
 * _continue below in the [StippleShop Compilation under Linux section](#stippleshop-compilation-under-linux)_
 
@@ -181,7 +181,19 @@ From the next steps, you only need to do **either** the [simple installation of 
   cd ~/code ; git clone https://github.com/dmperandres/StippleShop.git ; cd ~/code/StippleShop/code
   ```
 * edit the [```stippleshop.pro```](src/stippleshop.pro) project file; e.g., `nano stippleshop.pro`
-  * at the bottom of the file, adjust the ```INCLUDEPATH``` and ```LIBS``` paths to your respective user name and to your library versions of OpenCV and GLEW (update `user` to your Linux user name):
+  * at the bottom of the file, adjust the ```INCLUDEPATH``` and ```LIBS``` paths to your respective user name and to your library versions of OpenCV and GLEW (update `user` to your Linux user name) in case of the simple requirements installation to:
+  ```
+  INCLUDEPATH += $$PWD/shaders
+  INCLUDEPATH += $${FILE_IO_PATH}
+  INCLUDEPATH += $${COMMON_CLASSES_PATH}
+  
+  LIBS += \
+      -lGLEW \
+      -lopencv_core -lopencv_highgui \
+      -lopencv_imgproc -lopencv_imgcodecs \
+      -lGL
+  ```
+    and in case of the local compilation of the requirements to:
   ```
   INCLUDEPATH += /home/user/code/opencv-4.9.0/include/opencv4
   INCLUDEPATH += /home/user/code/opencv-4.9.0/include/opencv4/opencv2
