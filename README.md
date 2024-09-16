@@ -114,7 +114,7 @@ From the next steps, you only need to do **either** the [simple installation of 
 ### Simple installation of the requirements under Linux via packages (Alternative 1)
 * update your environment, install the needed requirements, and create a directory for the code:
   ```
-  sudo apt update ; sudo apt -y upgrade ; sudo apt -y install build-essential libxcb-cursor0 cmake cmake-qt-gui wget git libopencv-dev libglew-dev qtcreator qtbase5-dev qt5-qmake ; mkdir ~/code
+  sudo apt update ; sudo apt -y upgrade ; sudo apt -y install build-essential libxcb-cursor0 cmake cmake-qt-gui wget git libopencv-dev libglew-dev qtcreator qt6-base-dev qt6-qmake libqt6svg6 libqt6svg6-dev libqt6opengl6 libqt6opengl6-dev libqt6openglwidgets6 ; mkdir ~/code
   ```
 * _continue below in the [StippleShop Compilation under Linux section](#stippleshop-compilation-under-linux)_
 
