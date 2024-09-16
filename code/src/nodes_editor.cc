@@ -24,7 +24,7 @@
 #include <QJsonArray>
 #include <QMessageBox>
 
-#include <filter.h>
+#include "filter.h"
 
 #include <qlineedit.h>
 
