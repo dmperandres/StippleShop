@@ -112,9 +112,9 @@ Below we explain how these requirements are installed, both for Windows and Linu
 From the next steps, you only need to do **either** the [simple installation of the requirements](#simple-installation-of-the-requirements-under-linux-via-packages-alternative-1) (i.e., the easy way) **or** the [installation via local compilation](#installation-of-the-requirements-under-linux-via-local-compilation-alternative-2) (i.e., the way that provides you with more control, if desired).
 
 ### Simple installation of the requirements under Linux via packages (Alternative 1)
-* update your environment and install the needed requirements:
+* update your environment, install the needed requirements, and create a directory for the code:
   ```
-  sudo apt update ; sudo apt -y upgrade ; sudo apt -y install build-essential libxcb-cursor0 cmake cmake-qt-gui wget git libopencv-dev libglew-dev qtcreator qtbase5-dev qt5-qmake
+  sudo apt update ; sudo apt -y upgrade ; sudo apt -y install build-essential libxcb-cursor0 cmake cmake-qt-gui wget git libopencv-dev libglew-dev qtcreator qtbase5-dev qt5-qmake ; mkdir ~/code
   ```
 * _continue below in the [StippleShop Compilation under Linux section](#stippleshop-compilation-under-linux)_
 
