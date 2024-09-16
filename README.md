@@ -183,6 +183,8 @@ From the next steps, you only need to do **either** the [simple installation of 
 * edit the [```stippleshop.pro```](src/stippleshop.pro) project file; e.g., `nano stippleshop.pro`
   * at the bottom of the file, adjust the ```INCLUDEPATH``` and ```LIBS``` paths to your respective user name and to your library versions of OpenCV and GLEW (update `user` to your Linux user name) in case of the simple requirements installation to:
   ```
+  INCLUDEPATH += /usr/include/opencv4
+  INCLUDEPATH += /usr/include/opencv4/opencv2
   INCLUDEPATH += $$PWD/shaders
   INCLUDEPATH += $${FILE_IO_PATH}
   INCLUDEPATH += $${COMMON_CLASSES_PATH}
@@ -210,7 +212,7 @@ From the next steps, you only need to do **either** the [simple installation of 
   ```
   * in the [```stippleshop.pro```](src/stippleshop.pro) project file you can also adjust the filters to be included. By default, however, you can leave these settings as they are.
   * once done with the edits in [```stippleshop.pro```](src/stippleshop.pro), save it and exit the editor
-* run QtCreator: `cd ~/code ; Qt/Tools/QtCreator/bin/qtcreator`
+* run QtCreator; if using the simple requirements do `cd ~/code ; qtcreator`, if the locally compiled requirements do `cd ~/code ; Qt/Tools/QtCreator/bin/qtcreator`
 * open StippleShop project via "File > Open file or project..." and find the [```stippleshop.pro```](src/stippleshop.pro) in the folder ```~/code/StippleShop/code```
 * click on the "Configure Project" button
 * in the bottom-left of the interface, find the monitor icon of QtCreator, click on it, and switch to "Release"
