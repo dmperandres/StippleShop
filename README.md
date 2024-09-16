@@ -176,7 +176,10 @@ From the next steps, you only need to do **either** the [simple installation of 
 * _continue below in the [StippleShop Compilation under Linux section](#stippleshop-compilation-under-linux)_
 
 ### StippleShop Compilation under Linux
-* get the StippleShop sources and change into the directory: `cd ~/code ; git clone https://github.com/dmperandres/StippleShop.git ; cd ~/code/StippleShop/code`
+* get the StippleShop sources and change into the directory:
+  ```
+  cd ~/code ; git clone https://github.com/dmperandres/StippleShop.git ; cd ~/code/StippleShop/code
+  ```
 * edit the [```stippleshop.pro```](src/stippleshop.pro) project file; e.g., `nano stippleshop.pro`
   * at the bottom of the file, adjust the ```INCLUDEPATH``` and ```LIBS``` paths to your respective user name and to your library versions of OpenCV and GLEW (update `user` to your Linux user name):
   ```
