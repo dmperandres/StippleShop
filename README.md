@@ -109,7 +109,7 @@ Below we explain how these requirements are installed, both for Windows and Linu
 
 ## Build process for Linux (tested with [Kubuntu](https://kubuntu.org/) 22.04.3 & [Linux Mint](https://linuxmint.com/) 21.3)
 
-From the next steps, you only need to do **either** the [simple installation of the requirements](#installation-of-the-requirements-under-linux-via-local-compilation-alternative-2) (i.e., the easy way) **or** the installation via local compilation (i.e., the way that provides you with more control, if desired).
+From the next steps, you only need to do **either** the [simple installation of the requirements](#simple-installation-of-the-requirements-under-linux-via-packages-alternative-1) (i.e., the easy way) **or** the [installation via local compilation](#installation-of-the-requirements-under-linux-via-local-compilation-alternative-2) (i.e., the way that provides you with more control, if desired).
 
 ### Simple installation of the requirements under Linux via packages (Alternative 1)
 * update your environment and install the needed requirements:
@@ -173,6 +173,7 @@ From the next steps, you only need to do **either** the [simple installation of 
   * in the License Agreement dialog, check the box that you agree to the license conditions, then click "Next >"
   * click "Next >" to start the installation of Qt (if you do not have enough disk space then "Next >" is greyed out)
   * once it is done, you can close the installation dialog
+* _continue below in the [StippleShop Compilation under Linux section](#stippleshop-compilation-under-linux)_
 
 ### StippleShop Compilation under Linux
 * get the StippleShop sources: `cd ~/code ; git clone https://github.com/dmperandres/StippleShop.git`
