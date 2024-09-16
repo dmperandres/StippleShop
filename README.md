@@ -223,17 +223,19 @@ From the next steps, you only need to do **either** the [simple installation of 
   * you can follow the process of the build by clicking the button "4 Compile Output" at the bottom of the window
   * also note that there are some warnings that are generated, but these do not prevent the project from being build
 * after the compile process completes you can close QtCreator
-* the StippleShop binary can be found at `~/code/StippleShop/code/stippleshop`, yet it relies on some shared libraries; so to start it reliably we create a shell script thay adds the necessary paths (which you can adjust as needed, also by permanently moving the shared libaries):
-  * `cd ~/code/StippleShop/code/ ; nano ./stippleshop.sh`
-  * add this text (notice that you need to update `user` to your Linux user name)
-  ```
-  #!/bin/bash
-  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/user/code/glew-2.1.0/lib64
-  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/user/code/opencv-4.9.0/lib
-  ./stippleshop
-  ```
-  * make the shell script executable: `chmod 755 stippleshop.sh`
-  * assuming that the `stippleshop.sh` and the `stippleshop` binary are and remain in the same directory, then you can run StippleShop by simply calling `~/code/StippleShop/code/stippleshop ; ./stippleshop.sh`
+* the StippleShop binary can be found at `~/code/StippleShop/code/stippleshop`, yet it relies on some shared libraries; so
+  * in case you used the simple requirements, simply run `cd ~/code/StippleShop/code/ ; ./stippleshop.sh`
+  * in case you used the locally compiled requirements, to start it reliably we create a shell script thay adds the necessary paths (which you can adjust as needed, also by permanently moving the shared libaries):
+    * `cd ~/code/StippleShop/code/ ; nano ./stippleshop.sh`
+    * add this text (notice that you need to update `user` to your Linux user name)
+    ```
+    #!/bin/bash
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/user/code/glew-2.1.0/lib64
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/user/code/opencv-4.9.0/lib
+    ./stippleshop
+    ```
+    * make the shell script executable: `chmod 755 stippleshop.sh`
+    * assuming that the `stippleshop.sh` and the `stippleshop` binary are and remain in the same directory, then you can run StippleShop by simply calling `~/code/StippleShop/code/stippleshop ; ./stippleshop.sh`
 * _continue below in the [Example tutorial section](#example-tutorial-to-create-a-simple-stippled-image)_
 
 ## Example tutorial to create a simple stippled image
