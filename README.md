@@ -181,7 +181,7 @@ From the next steps, you only need to do **either** the [simple installation of 
   cd ~/code ; git clone https://github.com/dmperandres/StippleShop.git ; cd ~/code/StippleShop/code
   ```
 * edit the [```stippleshop.pro```](src/stippleshop.pro) project file; e.g., `nano stippleshop.pro`
-  * at the bottom of the file, adjust the ```INCLUDEPATH``` and ```LIBS``` paths to your respective user name and to your library versions of OpenCV and GLEW (update `user` to your Linux user name) in case of the simple requirements installation to:
+  * at the bottom of the file, adjust the ```INCLUDEPATH``` and ```LIBS``` paths to your respective user name and to your library versions of OpenCV and GLEW in case of the simple requirements installation to:
   ```
   INCLUDEPATH += /usr/include/opencv4
   INCLUDEPATH += /usr/include/opencv4/opencv2
@@ -195,7 +195,7 @@ From the next steps, you only need to do **either** the [simple installation of 
       -lopencv_imgproc -lopencv_imgcodecs \
       -lGL
   ```
-    and in case of the local compilation of the requirements to:
+    and in case of the local compilation of the requirements to (update `user` to your Linux user name):
   ```
   INCLUDEPATH += /home/user/code/opencv-4.9.0/include/opencv4
   INCLUDEPATH += /home/user/code/opencv-4.9.0/include/opencv4/opencv2
