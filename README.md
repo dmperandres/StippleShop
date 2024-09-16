@@ -109,15 +109,16 @@ Below we explain how these requirements are installed, both for Windows and Linu
 
 ## Build process for Linux (tested with [Kubuntu](https://kubuntu.org/) 22.04.3 & [Linux Mint](https://linuxmint.com/) 21.3)
 
-From the next steps, you only need to do either the simple installation of the requirements (i.e., the easy way) or the installation via local compilation (i.e., the way that provides you with more control, if desired).
+From the next steps, you only need to do **either** the [simple installation of the requirements](#installation-of-the-requirements-under-linux-via-local-compilation-alternative-2) (i.e., the easy way) **or** the installation via local compilation (i.e., the way that provides you with more control, if desired).
 
-### Simple installation of the requirements under Linux via packages
+### Simple installation of the requirements under Linux via packages (Alternative 1)
 * update your environment and install the needed requirements:
   ```
   sudo apt update ; sudo apt upgrade ; sudo apt install build-essential libxcb-cursor0 cmake cmake-qt-gui wget git libopencv-dev libglew-dev qtcreator qtbase5-dev qt5-qmake
   ```
+* _continue below in the [StippleShop Compilation under Linux section](#stippleshop-compilation-under-linux)_
 
-### Installation of the requirements under Linux via local compilation
+### Installation of the requirements under Linux via local compilation (Alternative 2)
 * update your environment: `sudo apt update ; sudo apt upgrade`
 * install the compiler and other complementary tools: `sudo apt install build-essential libxcb-cursor0 cmake cmake-qt-gui wget git`
 * create a folder to place all the necessary code and libraries and change to that folder: `cd ~ ; mkdir code ; cd code`
