@@ -112,7 +112,10 @@ Below we explain how these requirements are installed, both for Windows and Linu
 From the next steps, you only need to do either the simple installation of the requirements (i.e., the easy way) or the installation via local compilation (i.e., the way that provides you with more control, if desired).
 
 ### Simple installation of the requirements under Linux via packages
-* will be updated
+* update your environment and install the needed requirements:
+  ```
+  sudo apt update ; sudo apt upgrade ; sudo apt install build-essential libxcb-cursor0 cmake cmake-qt-gui wget git libopencv-dev libglew-dev qtcreator qtbase5-dev qt5-qmake
+  ```
 
 ### Installation of the requirements under Linux via local compilation
 * update your environment: `sudo apt update ; sudo apt upgrade`
